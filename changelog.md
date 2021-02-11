@@ -52,7 +52,7 @@ New API Updates:
 2. UI Changes:
         1. Separate MEC Courses from default Topics.        
 
-####Update Prepackaged courses and GTPP topics
+#### Update Prepackaged courses and GTPP topics
 
 UI Updates;
 1. Update MEC topics in Prepackaged dropdown.
