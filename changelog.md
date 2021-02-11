@@ -1,6 +1,6 @@
-# Changelog for Microsoft Graph Communications SDK and Samples
+# Changelog for GTPP
 
-This changelog covers what's changed in Microsoft Graph Communications SDK and its associated samples.
+This changelog covers what's changed in GTPP.
 ## Oct 2020
 - Updated all samples to latest media binaries: Microsoft.Skype.Bots.Media 1.19.0.25-alpha
   - Fixed a known memory leak bug in Media library.
@@ -191,10 +191,7 @@ This release cleans up interfaces where some members have been renamed or remove
 | OnlineMeeting.StartTime                | OnlineMeeting.StartDateTime                       |
 | Participant.SubscribeVideoAsync        | Call.GetLocalMediaSession().VideoSocket.Subscribe |
 
-## September 2018
 
-1. Updated to https://graph.microsoft.com/beta endpoint for Microsoft Ignite 2018 release.
-2. Updated to public nuget version of Graph Comms SDK. Note new version scheme: 1.0.0-prerelease.48
 
 ## August 2018
 
@@ -295,37 +292,67 @@ Added logic to handle failed call deletion, or any time a stale call needs to be
 this.Client.Calls().TryForceRemove(callLegId, out ICall call);
 ```
 
-## March 2018
+### Jul 22, 2019
 
-### Core SDK
-No changes
+1. On Event Create - If this training topic is available in MEC system, then we need to genrate Promocode.
+        (From MEC system, get all promocodes and verify that the selected training topics is available - through api)
+        
+2. Generate 2 APIs, one for sending the MEC training topics selected for that promocode (and reduce the count to 1 from total attendees)
+        second api for adding the attendees count for that promocode.
+1. Learning Topics API with client view to access the Api
+2. Keep link at Admin View page to refresh the list.
 
-### Stateful SDK
-- CorrelationId is now a Guid.
-- Added auto expiry of certificates in authentication provider.
-- Added support for `IGraphLogger` as part of `ICommunicationsClient`.
-- Set `AllowConversationWithoutHost = true;` for joined meetings.  This will ensure that any participants joining the meeting after the bot will not get kicked out of the meeting once bot leaves.
-- Added better tracking of calls by setting the `correlationId` for new calls and media sessions.
-- Added `ICommunicationsClient.TerminateAsync(bool onlyMedia, TimeSpan timeout);`  SDK supports couple flavors of cleanup:
-  - **Recommended:** `TerminateAsync(false, timeout)` will terminate all existing calls, terminate the media platform, shut down background threads, and dispose internal objects.  Setting `timeout` will still terminate the media platform, shut down background threads, and dispose internal objects, but it will limit the time spent waiting for calls to be terminated.
- - `ICommunicationsClient.TermianteAsync(true, timeout)` will only terminate the media platform.  In this instance the `timeout` parameter is ignored.
- - `ICommunicationsClient.TerminateAsync(timeout)` is used for media hosted on MSFT cloud, and not relevant in this drop.
-- The termination state now also bubbles up in the call.OnUpdated notification.
+While calling the API, insert the topics into DB and show the inserted topics to the user
 
-If bots wish to shut down cleanly, we recommend the following:
-``` csharp
-try
-{
-  // Terminate all existing calls and wait for confirmation.
-  // Terminate media platform, terminate background threads, dispose objects.
-  await this.Client
-    .TerminateAsync(false, new TimeSpan(hours: 0, minutes: 1, seconds: 0))
-    .ConfigureAwait(false);
-}
-catch (Exception)
-{
-  // Terminate with error.
-}
+Avoid keeping button in Admin View. Instead, populate the Topics from API on clicking Create event
 
-// Perform graceful termination logic.
-```
+
+### Jul 12, 2019
+### Jul 27, 2019
+
+1. Update the latest Topics and Pre-Packaged courses in DB. The GTPP Topics and the Pre-packaged courses list remains the same all the time. If any change is needed it will be handled manually at the backend.
+
+2. Using the MEC API response, check whether any of the MEC courses exist in the pre-packaged courses list by matching the course name. If found, need to save all the MEC details (MEC ID, type, name, description) so we can return this information when redeem code API gets called. [DOn't insert new topics from API]
+Note: These 3 pre-packaged courses are MEC courses so we will do the mapping manually if needed (Microsoft Innovative Educator (MIE) Trainer Academy, MIE OneNote Teacher Academy, MIE Office 365 Teacher Academy)
+
+3. Promo code should be generated for all the Events irrespective of the delivery type.
+
+4. Promo Codes should start with the letter of first name and last time (ie Ginelle Cousins = GC) and end with fiscal year (ie FY20 = 20).  In between 5 alpha and numeric characters, avoiding using a zero and O unless it’s in trainer name.  Example for Ginelle Cousins = GC9YTL20
+
+5. Instead of the range, need to calculate the middle of the event duration and include that in the redeem API response. [Refer the email with Subject; Updated API format]
+
+6. In Manager VIew - Events List, trainer Performance show his own record - Working as expected
+7. Dashboard - Show company based dashboard for Manager. - on hold.
+8. Performance Chart - Merge Performance column with bar in all areas.
+9. In Manager Event List - Trainer Name, # of Attendees (Remove Organization & Org Country)
+10. Remove MLC
+11. Microsoft Field - Don't have option to generate Survey as of ShowcaseSchool Trainer.
+
+### June 22, 2019
+
+1. Manager view, Trainer Performance list, with N/A in performance column, if there are no responses for that trainer.
+2. Manager View, trainer Performance list, click on Trainer name, will show popup with all Events and its Survey responses. If no survey Response, then show N/A in performance column.
+3. Trainer Dashboard, show Smiley based on 1st Survey question response. (Average to max. 5)
+4. View Event page, Show Survey Response with number of response counts. If there are no response, then show (0 Response)
+5. If event has been created with Independent Organisation Or Showcase School Trainer, hide Survey Language.
+6. In Edit Event page hide Survey Language for Independent Organisation Or Showcase School Trainer
+7. In View Event page hide Survey Information part
+8. Updated latest Training topics in dropdown.
+9. Updated Prepackaged courses as Grouped list in dropdown.
+10. Updated the ccompany fake data
+11. Updated the Region column in discrepancy report.
+
+### June 10, 2019
+
+1. Remove Company from table view
+2. Add Trainers name
+3. Count of training trained based on filter (Near filter or dropdown)
+4. Datewise or monthwise report.
+
+1. Inactive Users, not able to login or register into the tool. (Need to clarify)
+2. User can able to unregister and delete their data from the tool
+3. As admin can manage Users/Managers
+4. As admin can able to add/delete admins
+
+1. Check for Adding dynamic text in Survey (Event Date and Training Tools)
+Use Descriptive TExt Question type at the top of the question. Dynamically retrieve the question on Copy survey and append the Event Date and Tools Trainedceful termination logic.
