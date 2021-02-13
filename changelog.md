@@ -2,6 +2,160 @@
 
 This changelog covers what's changed in GTPP.
 
+### Jan 12, 2021
+1. Edu Org Manager/Edu Org Trainer will have access to create a survey and view their survey response.
+2. Edu Org managers will be able to see all their trainer's survey details in the manager view.
+3. Survey chart will be enabled in the dashboard for edu Org users.
+
+### Dec 3, 2020
+Achievement code dropdown - bulk data binding issue fixed
+
+### Nov 30, 2020
+Tenant validation Regular expression updated
+
+### Nov 17, 2020
+Approval mail contents updated and contents are configured in appsettings.json
+
+### Oct 24, 2020
+Release 1:
+1. Organization Manager - Allow 2 users without the need for approval. After that Send an email to the Admin and wait for Approval
+2. Remove Survey chart if the user doesn't have a survey company
+3. Add Achievement filter in View All Events and Events lists in Manager and Admin
+4. Tenant Field validation
+5. Fixed Profile code issue if exceeds 1 year time
+7. Dashboard chart "y-axis" values round off
+8. Accessibility issues fixed
+
+
+### Sep 2, 2020
+New pre-package course added
+In EduTrack, these should be listed under 1-hour trainings:
+    ­Hybrid Learning: a New Model for the Future of Learning
+    Hybrid Learning in the Primary Classroom
+    Hybrid Learning in the Intermediate Classroom
+    Hybrid Learning for the Adolescent Learner
+
+### Jun 19, 2020
+updated the role name from Edu Org training trainer to Edu Org Trainer
+
+### Jun 13, 2020
+Removed accidental use of NOLOCK in table lookup
+
+### Jun 9, 2020
+MEC Store Names List Bulk Upload
+
+### Jun 4, 2020
+1. Create a new event date must be greater than June 1, 2019, and less than today’s date+60 days.
+2. When a user edits an old event date before June 1, 2019 event date select box should be empty.  Again they choose a new date that must be greater than June 1, 2019, and less than today’s date+60 days.
+
+### May 18, 2020
+1. Removed all warnings while deploying.
+2. Capture all errors in an error page. Show description of the error in the page.
+
+### May 13, 2020
+Updated Export survey link to provide both Survey and Event details in separate tabs.
+Move the updated code to Stage1 and verify.
+
+### May 8, 2020
+Removed the Top 5 Organization chart for trainer also (like in manager dashboard view) and extend the width of Top 5 Training Topics chart area.
+
+### May 7, 2020
+Updated column wrap in excel download in Manager view
+Cookie expire time updated from 20 to 45
+
+### May 6, 2020
+1. Limit 3 courses should be applied separately for topics and pre-packaged course. The message should be different. Client side validation possible? 
+2. Include total redeemed count in the performance report table (Manager view) 
+3. Redeem count chart need to be replaced. 
+
+### Apr 24, 2020
+Additional changes release 2:
+1. Pre-packaged List
+    • Change Did you use pre-packaged training from http://aka.ms/mieacademy?  To Did you use pre-packaged training from http://aka.ms/mieacademy? or aka.ms/teachertrainingpacks?
+    • Create new category at top titled Teacher Training Packs with the following choices.
+        Building Literacy
+        Data collection and assessment
+        Creativity in the classroom
+        Unlock Office 365 for the classroom
+        21st century classrooms with Microsoft Teams
+        Inclusive classrooms
+    • Remove the following from the Pre-Packaged training list:     
+        1 hour & 3 hour:  Physical computing and its role in education
+        Lead the transformation:  An administrator’s pathway to success with the Education Transformation Framework
+        Let’s get phygital:  Mixing digital and physical technology for engagement
+        The pen is mightier than the keyboard:  Benefits of digital inking across Windows 10
+        Tweet and tag your way to a stronger #PLN
+        What’s your app-titude?  Discover the best-loved apps for teaching and learning in the Microsoft store
+2. Training Topics: Limit to 3 or fewer topics selected.
+3. Manager Role: 
+    Add an XLS export to the Survey Results and Recent Training List
+4. All Roles: 
+    Enable users to delete a training event (If we spin up more work, can we reduce the original $16k cost estimate?)
+    Add column to Event List table to include # of Codes Redeemed.
+    Change users dashboard to remove Top 5 Organizations to capture Achievement Codes Redeemed YTD.
+5. Admin Role:
+    Provide feasibility for Admin to change the URL where the MIE Master and MIE Trainer code badges replicate on users sites, removing reference to field for changing existing “promocode”.
+6. Reporting:  For Survey tab, add Organization, Partner Role, Date.  Tie back the Event ID included in Survey tab to Events
+
+### Apr 17, 2020
+Role name changes:
+Partner Manager  -> GTP Manager
+Partner Trainer -> GTP Trainer
+Independent School Manager -> Edu Org Training Manager
+Independent School Trainer -> Edu Org Training Trainer
+
+### Apr 4, 2020
+GTPP Additional changes release 1:
+1. 5 new roles will be added - Showcase training Manager, School training Manager, School trainer, MS Store Manager and MS Store Trainer.
+
+2. To setup a store or a school, Admin will add a new Organization and assign the roles. Profile code should be given for each role. 
+
+3. No change in the registration screen.
+1. School trainer will register as "Independent trainer". After they register, they should be able to associate with an Independent school in the edit registration screen without any profile code(But admin have to create profile code while creating organization).  They should be able to change this anytime but they cannot remove by himself/herself and only one association is allowed at a time.  - done (as we discussed)
+2. All the other role users will be able to join using their profile code.
+
+4. School trainer will be able to still add events as "Independent trainer". In this case, this data will not be visible to the School Manager.  
+
+5. School trainer will be able to add co-trainers for an event within their Independent School.
+
+6. Similar to Showcase schools, survey will not be available for Independent Schools and MS Stores as well.  
+
+7. Showcase school manager, School training manager and MS Store manager have option to remove a user from their Organization. 
+
+8. Showcase school manager will be able to see their Organization data that is already recorded by their Showcase school trainers.
+
+9. When an Independent trainer associate themself to an Independent school, their existing event data will not move to the Independent school. It will stay as Independent trainer event and it will not be visible to the School manager.  
+
+10. New users and existing store users (STORES789) will use the profile code to join a store.
+
+11. For existing store users, when they enter the new store profile code, we need to migrate their old data to the new Store. 
+
+### Jan 29, 2020
+Redeem functionality changed:
+1. Below are the links that we would need to point to, dynamically adjusting to whether they are an MIE Trainer or MIE Master Trainer.  Two options:
+    - Ideally, you change the “Redeem Code” to say Get your badge and link to below.
+    - If unable to do #1, then temporarily change the redeem code link to resolve to the following links.
+ 
+Here is the link to the Trainer badge: https://1drv.ms/f/s!AgTGj1QY5vSRrjM4CtBsDwJxtYZ6
+
+And the master trainer badge: https://1drv.ms/f/s!AgTGj1QY5vSRrjK3L80lypsJQ7pX
+
+### Jan 8, 2020
+Removed asterisk from Other Trainers
+
+### Dec 23, 2019
+Mec API URL Changed:
+The old URL is:
+https://preview.education.microsoft.com/api/v1/learningContent
+
+New URL is:
+https://education.microsoft.com/api/v1/learningContent
+
+Just "preview" part is removed. Everything stays same.
+
+### Dec 10, 2019
+PowerBi Report Updated: Sample powerbi report added  - Rolled back
+
 ### Oct 21, 2019
 1. Remove asterisk & requirement for O365 Tenant and Domain
 2. Manager List Update: 
@@ -54,7 +208,7 @@ New API Updates:
 
 #### Update Prepackaged courses and GTPP topics
 
-UI Updates;
+UI Updates:
 1. Update MEC topics in Prepackaged dropdown.
 2. Fetching MEC topics from API should only update the Prepackaged topics based on Name match. If matched, then update the ID column. No Insertion of MEC topics into Prepackaged table.
 3. Duration flow is as it is. 
