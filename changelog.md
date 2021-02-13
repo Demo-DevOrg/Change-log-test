@@ -30,10 +30,10 @@ Release 1:
 ### Sep 2, 2020
 New pre-package course added
 In EduTrack, these should be listed under 1-hour trainings:
-    ­Hybrid Learning: a New Model for the Future of Learning
-    Hybrid Learning in the Primary Classroom
-    Hybrid Learning in the Intermediate Classroom
-    Hybrid Learning for the Adolescent Learner
+    ­ Hybrid Learning: a New Model for the Future of Learning
+    - Hybrid Learning in the Primary Classroom
+    - Hybrid Learning in the Intermediate Classroom
+    - Hybrid Learning for the Adolescent Learner
 
 ### Jun 19, 2020
 updated the role name from Edu Org training trainer to Edu Org Trainer
@@ -53,15 +53,15 @@ MEC Store Names List Bulk Upload
 2. Capture all errors in an error page. Show description of the error in the page.
 
 ### May 13, 2020
-Updated Export survey link to provide both Survey and Event details in separate tabs.
-Move the updated code to Stage1 and verify.
+1. Updated Export survey link to provide both Survey and Event details in separate tabs.
+2. Move the updated code to Stage1 and verify.
 
 ### May 8, 2020
 Removed the Top 5 Organization chart for trainer also (like in manager dashboard view) and extend the width of Top 5 Training Topics chart area.
 
 ### May 7, 2020
-Updated column wrap in excel download in Manager view
-Cookie expire time updated from 20 to 45
+1. Updated column wrap in excel download in Manager view
+2. Cookie expire time updated from 20 to 45
 
 ### May 6, 2020
 1. Limit 3 courses should be applied separately for topics and pre-packaged course. The message should be different. Client side validation possible? 
@@ -71,15 +71,15 @@ Cookie expire time updated from 20 to 45
 ### Apr 24, 2020
 Additional changes release 2:
 1. Pre-packaged List
-    • Change Did you use pre-packaged training from http://aka.ms/mieacademy?  To Did you use pre-packaged training from http://aka.ms/mieacademy? or aka.ms/teachertrainingpacks?
-    • Create new category at top titled Teacher Training Packs with the following choices.
+    - Change Did you use pre-packaged training from http://aka.ms/mieacademy?  To Did you use pre-packaged training from http://aka.ms/mieacademy? or aka.ms/teachertrainingpacks?
+    - Create new category at top titled Teacher Training Packs with the following choices.
         Building Literacy
         Data collection and assessment
         Creativity in the classroom
         Unlock Office 365 for the classroom
         21st century classrooms with Microsoft Teams
         Inclusive classrooms
-    • Remove the following from the Pre-Packaged training list:     
+    - Remove the following from the Pre-Packaged training list:     
         1 hour & 3 hour:  Physical computing and its role in education
         Lead the transformation:  An administrator’s pathway to success with the Education Transformation Framework
         Let’s get phygital:  Mixing digital and physical technology for engagement
@@ -99,10 +99,10 @@ Additional changes release 2:
 
 ### Apr 17, 2020
 Role name changes:
-Partner Manager  -> GTP Manager
-Partner Trainer -> GTP Trainer
-Independent School Manager -> Edu Org Training Manager
-Independent School Trainer -> Edu Org Training Trainer
+1. Partner Manager  -> GTP Manager
+2. Partner Trainer -> GTP Trainer
+3. Independent School Manager -> Edu Org Training Manager
+4. Independent School Trainer -> Edu Org Training Trainer
 
 ### Apr 4, 2020
 GTPP Additional changes release 1:
