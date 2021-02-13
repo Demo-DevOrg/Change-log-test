@@ -158,17 +158,17 @@ PowerBi Report Updated: Sample powerbi report added  - Rolled back
 ### Oct 21, 2019
 1. Remove asterisk & requirement for O365 Tenant and Domain
 2. Manager List Update: 
-  - Sort table by Action Required so those that require approval are at the top of the list.
-  - Replace Reg Date with Country (Event Country)
+    - Sort table by Action Required so those that require approval are at the top of the list.
+    - Replace Reg Date with Country (Event Country)
 3. Event List: 
-  - Can you replace Training Period with # of Attendees
-  - Replace Training Topics with Trainer Name (moving Organization to the left one column, so it sits before Trainer Name)
+    - Can you replace Training Period with # of Attendees
+    - Replace Training Topics with Trainer Name (moving Organization to the left one column, so it sits before Trainer Name)
 4. Need to add 2 new pre-packaged courses. 
-  - Under the 1-day group add:
-  - Student Teacher Education Program (STEP) Academy, 1-Day
-  - Inclusive Classrooms Academy
-  - Under the 2-day group, add:
-  - Student Teacher Education Program (STEP) Academy, 2-Day
+    - Under the 1-day group add:
+    - Student Teacher Education Program (STEP) Academy, 1-Day
+    - Inclusive Classrooms Academy
+    - Under the 2-day group, add:
+    - Student Teacher Education Program (STEP) Academy, 2-Day
 5. Update the event duration text to 3+ days 
 6. Event List:  Change Org Country to Event Country.  This will address the Independent Trainer as a "US" organization issue. 
 
