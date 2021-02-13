@@ -17,7 +17,6 @@ Tenant validation Regular expression updated
 Approval mail contents updated and contents are configured in appsettings.json
 
 ### Oct 24, 2020
-Release 1:
 1. Organization Manager - Allow 2 users without the need for approval. After that Send an email to the Admin and wait for Approval
 2. Remove Survey chart if the user doesn't have a survey company
 3. Add Achievement filter in View All Events and Events lists in Manager and Admin
@@ -30,10 +29,10 @@ Release 1:
 ### Sep 2, 2020
 New pre-package course added
 In EduTrack, these should be listed under 1-hour trainings:
-    ­ Hybrid Learning: a New Model for the Future of Learning
-    - Hybrid Learning in the Primary Classroom
-    - Hybrid Learning in the Intermediate Classroom
-    - Hybrid Learning for the Adolescent Learner
+ ­ Hybrid Learning: a New Model for the Future of Learning
+ - Hybrid Learning in the Primary Classroom
+ - Hybrid Learning in the Intermediate Classroom
+ - Hybrid Learning for the Adolescent Learner
 
 ### Jun 19, 2020
 updated the role name from Edu Org training trainer to Edu Org Trainer
@@ -159,17 +158,17 @@ PowerBi Report Updated: Sample powerbi report added  - Rolled back
 ### Oct 21, 2019
 1. Remove asterisk & requirement for O365 Tenant and Domain
 2. Manager List Update: 
-• Sort table by Action Required so those that require approval are at the top of the list.
-• Replace Reg Date with Country (Event Country)
+  - Sort table by Action Required so those that require approval are at the top of the list.
+  - Replace Reg Date with Country (Event Country)
 3. Event List: 
-• Can you replace Training Period with # of Attendees
-• Replace Training Topics with Trainer Name (moving Organization to the left one column, so it sits before Trainer Name)
+  - Can you replace Training Period with # of Attendees
+  - Replace Training Topics with Trainer Name (moving Organization to the left one column, so it sits before Trainer Name)
 4. Need to add 2 new pre-packaged courses. 
-Under the 1-day group add:
-Student Teacher Education Program (STEP) Academy, 1-Day
-Inclusive Classrooms Academy
-Under the 2-day group, add:
-Student Teacher Education Program (STEP) Academy, 2-Day
+  - Under the 1-day group add:
+  - Student Teacher Education Program (STEP) Academy, 1-Day
+  - Inclusive Classrooms Academy
+  - Under the 2-day group, add:
+  - Student Teacher Education Program (STEP) Academy, 2-Day
 5. Update the event duration text to 3+ days 
 6. Event List:  Change Org Country to Event Country.  This will address the Independent Trainer as a "US" organization issue. 
 
@@ -200,11 +199,11 @@ Student Teacher Education Program (STEP) Academy, 2-Day
 ### Aug 22, 2019
 New API Updates:
 1. API changes 
-        1. Need to return updated JSON content                
-        2. Need to load duration. MEC learningContent api should return duration for the topics?                
+      - Need to return updated JSON content                
+      - Need to load duration. MEC learningContent api should return duration for the topics?                
                 
 2. UI Changes:
-        1. Separate MEC Courses from default Topics.        
+	  - Separate MEC Courses from default Topics.        
 
 #### Update Prepackaged courses and GTPP topics
 
